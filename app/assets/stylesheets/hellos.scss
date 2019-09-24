@@ -1,3 +1,73 @@
 // Place all the styles related to the hellos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  background-color: #FF00FF;
+  width: 100%;
+  weight: 70px;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+ }
+
+.main-content{
+   padding-bottom: 70px;
+ }
+ html {
+   position:relative;
+   min-height: 100%;
+   box-sizing: border-box;
+ }
+
+ footer {
+   background-color: blue;
+   position: fixed;
+   // positon:absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+ }
+// html {
+//  position: relative;
+//  min-height: 100%;
+//  padding-bottom: 100px;
+//  box-sizing: border-box;
+// }
+// footer {
+//  position: absolute;
+//  left: 0;
+//  bottom: 0;
+//  width: 100%;
+//  height: 100px;
+// }
+footer p {
+  padding-left: 40%;
+  font-size: 40px;
+}
+
+
+.over {
+  margin-left: 40;
+}
+
+h1{
+  background-color:blue;
+}
+
+
+.content{
+    background-color:green;
+    height: 50px;
+}
+h2 {
+  background-color:#00FFFF;
+}
+.table table-striped table-hover {
+  padding-bottom:10%;
+}
+.post {
+  margin-left: 45%;
+  height: 40px;
+  font-size: 30px;
+}

@@ -8,10 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-    <div class='container'>
+  <body class="site-wrapper">
+    <div>
+      <header>
+        <h1>ツイッター</h1>
+        <p>日付: <%= Date.today %></P>
+        <div class = "over"><%= link_to '一覧画面', apps_path %></div>
+      </header>
+    <div class="main-content">
       <%= yield %>
     </div>
+    <footer>
+      <p>みんなで呟こう</P>
+    </footer>
+  </div>
   </body>
 </html>
