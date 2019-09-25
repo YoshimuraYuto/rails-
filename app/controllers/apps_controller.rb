@@ -25,13 +25,13 @@ class AppsController < ApplicationController
   end
 
   def confirm
-    # @app = App.new(app_params)
+    @app = App.new(app_params)
     # @app = App.find(params[:id])
-    if params[:new]
+    # if params[:new]
     render :new if @app.invalid?
-    else
-    render :edit
-    end
+    # else
+    # # render :edit
+    # end
   end
   #
   # def edit_confirm
