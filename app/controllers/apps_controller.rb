@@ -21,12 +21,23 @@ class AppsController < ApplicationController
 
 
   def edit
+    # @app = App.find(params[:id])
   end
 
   def confirm
-    @app = App.new(app_params)
+    # @app = App.new(app_params)
+    # @app = App.find(params[:id])
+    if params[:new]
     render :new if @app.invalid?
+    else
+    render :edit
+    end
   end
+  #
+  # def edit_confirm
+  #   @app = App.find(params[:id])
+  #   @app.content = app_params[:content]
+  # end
 
 
   def create
@@ -49,15 +60,15 @@ class AppsController < ApplicationController
 
 
   def update
-    respond_to do |format|
+
       if @app.update(app_params)
-        format.html { redirect_to @app, notice: 'App was successfully updated.' }
-        format.json { render :show, status: :ok, location: @app }
+        redirect_to @app, notice: 'App was successfully updated.'
+        # render :show, status: :ok, location: @app
       else
-        format.html { render :edit }
-        format.json { render json: @app.errors, status: :unprocessable_entity }
+        render :edit
+        # render json: @app.errors, status: :unprocessable_entity
       end
-    end
+
   end
 
 
@@ -75,7 +86,7 @@ class AppsController < ApplicationController
       @app = App.find(params[:id])
     end
 
-    
+
     def app_params
       params.require(:app).permit(:content)
     end

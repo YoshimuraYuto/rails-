@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :apps do
     collection do
         post :confirm
+        # patch :edit_confirm
       end
   end
   root 'hellos#index'
